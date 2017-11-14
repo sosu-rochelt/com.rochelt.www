@@ -1,0 +1,63 @@
+@import '../../../css/vars';
+
+.footer {
+  position: relative;
+  width: span(8);
+  margin: auto;
+  @include breakpoint($desktop) {
+    width: span(10);
+  }
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  justify-content: center;
+  p,
+  address {
+    font-style: normal;
+
+    color: $primaryColor;
+
+    @extend %footer;
+  }
+  .footer-contact,
+  .footer-address {
+    margin: 0;
+
+    span {
+      &:after {
+        display: inline-block;
+
+        margin: 0 10px;
+
+        content: '|';
+      }
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+  .footer-contact {
+    margin-bottom: 60px;
+  }
+  .icon--name {
+    display: block;
+    margin: 70px auto 23px;
+  }
+  .icon--instagram {
+    display: block;
+
+    margin: 0 auto 8px auto;
+  }
+
+  a,
+  a:link,
+  a:visited {
+    @extend %imprint;
+    @extend %link;
+  }
+  &-links {
+    margin-bottom: 15px;
+  }
+}

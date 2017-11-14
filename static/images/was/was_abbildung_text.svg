@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="720" viewBox="0 0 1140 720">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-1 {
+        stroke: #ddd;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #ddd;
+      }
+
+      .cls-12, .cls-3 {
+        fill: #3a7867;
+      }
+
+      .cls-4 {
+        stroke: #777776;
+      }
+
+      .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-6 {
+        font-size: 15px;
+        font-family: GillSans, Gill Sans;
+        letter-spacing: 0.4em;
+      }
+
+      .cls-6, .cls-8 {
+        fill: #777776;
+      }
+
+      .cls-12, .cls-7, .cls-8 {
+        font-size: 13.5px;
+        font-family: Times-Roman, Times;
+      }
+
+      .cls-7 {
+        letter-spacing: 0.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0.02em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0.02em;
+      }
+
+      .cls-11 {
+        letter-spacing: 0.02em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0.02em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <title>Abbildung_Flasche_Text_ohne_Bild-01-01</title>
+  <g id="Ebene_2" data-name="Ebene 2">
+    <line class="cls-1" x1="911.94" y1="297.48" x2="933.14" y2="297.48"/>
+    <polyline class="cls-1" points="890.75 402.8 911.44 402.8 911.44 192.17 890.75 192.67"/>
+    <path class="cls-2" d="M791,274h3.64a4,4,0,0,1,.5,0l.2,0h.09a.53.53,0,0,0,.51-.32c5.35-4,10.39-22.72,13.13-34.28v0a1.74,1.74,0,0,0,.07-.31c0-.09,0-.18,0-.26,2.71-11.47-2.63-18.6-3.3-19.68s-4.6-5.41-10.74-10c-.81-.76-1.6-1.54-2.36-2.36a25.84,25.84,0,0,1-3.23-4.39,17.58,17.58,0,0,1-2.34-7.59,5.31,5.31,0,0,1,0-1v-.15a1.4,1.4,0,0,1,1.13-1.41l.36,0a.27.27,0,0,0,.06-.22v0s0,0,0-.06,0-.19-.37-.26a1.84,1.84,0,0,0-.37,0H788l-4.19,0-4.19,0h-.09a1.84,1.84,0,0,0-.37,0c-.36.07-.37.18-.37.26s0,0,0,.06v0a.27.27,0,0,0,.06.22l.36,0a1.4,1.4,0,0,1,1.13,1.41v.15a5.39,5.39,0,0,1,0,1,17.58,17.58,0,0,1-2.34,7.59,26,26,0,0,1-3.23,4.39c-.76.81-1.55,1.59-2.35,2.36-6.13,4.63-10.06,9-10.74,10s-6,8.21-3.31,19.68c0,.08,0,.17,0,.26a1.65,1.65,0,0,0,.07.31v0c2.75,11.56,7.79,30.23,13.13,34.28a.53.53,0,0,0,.51.32h.09l.2,0a4,4,0,0,1,.5,0H791Z"/>
+    <path class="cls-3" d="M789.56,345.39H792l.33,0,.13,0h.06a.36.36,0,0,0,.34-.22c3.58-2.71,7-15.22,8.8-23v0a1.16,1.16,0,0,0,0-.2c0-.06,0-.12,0-.17a16.06,16.06,0,0,0-2.21-13.18,38.28,38.28,0,0,0-7.2-6.73c-.54-.51-1.07-1-1.58-1.58a17.38,17.38,0,0,1-2.16-2.94,11.78,11.78,0,0,1-1.57-5.09,3.62,3.62,0,0,1,0-.66v-.1a.94.94,0,0,1,.76-.95l.24,0a.18.18,0,0,0,0-.14v0a.28.28,0,0,0,0,0c0-.05,0-.12-.25-.17l-.25,0h-5.73l-.25,0c-.24,0-.24.12-.25.17a.29.29,0,0,0,0,0v0a.18.18,0,0,0,0,.14l.24,0a.94.94,0,0,1,.76.95v.1a3.53,3.53,0,0,1,0,.66,11.77,11.77,0,0,1-1.57,5.09,17.39,17.39,0,0,1-2.16,2.94c-.51.54-1,1.07-1.58,1.58a38.28,38.28,0,0,0-7.2,6.73,16.06,16.06,0,0,0-2.21,13.18c0,.06,0,.12,0,.17a1.17,1.17,0,0,0,0,.2v0c1.84,7.74,5.22,20.26,8.8,23a.36.36,0,0,0,.34.22H777l.13,0,.33,0h12.11Z"/>
+    <path class="cls-2" d="M787.69,401.26h1.25a.15.15,0,0,0,.14-.09c1.51-1.14,2.94-6.42,3.71-9.69h0a.54.54,0,0,0,0-.09v-.07a6.78,6.78,0,0,0-.93-5.56,16.2,16.2,0,0,0-3-2.84c-.23-.21-.45-.44-.66-.67a7.27,7.27,0,0,1-.91-1.24,5,5,0,0,1-.66-2.15,1.61,1.61,0,0,1,0-.28v0a.4.4,0,0,1,.32-.4h.1a.07.07,0,0,0,0-.06h0a.1.1,0,0,0,0,0s0-.05-.1-.07h-2.63c-.1,0-.1.05-.1.07a.1.1,0,0,0,0,0h0a.07.07,0,0,0,0,.06h.1a.4.4,0,0,1,.32.4v0a1.62,1.62,0,0,1,0,.28A5,5,0,0,1,784,381a7.27,7.27,0,0,1-.91,1.24c-.21.23-.44.45-.66.67a16.2,16.2,0,0,0-3,2.84,6.78,6.78,0,0,0-.93,5.56v.07a.54.54,0,0,0,0,.09h0c.78,3.27,2.2,8.55,3.71,9.69a.15.15,0,0,0,.15.09h5.33Z"/>
+    <line class="cls-4" x1="366.41" y1="55.41" x2="564.54" y2="55.41"/>
+    <polyline class="cls-4" points="724.41 156.93 690.71 156.93 690.71 319.53 616.81 319.53"/>
+    <polyline class="cls-4" points="565 88.52 514.79 88.52 514.79 363.51 366.41 363.51"/>
+    <path class="cls-5" d="M572,63.41a8,8,0,1,0-8-8,8,8,0,0,0,8,8"/>
+    <g>
+      <line class="cls-4" x1="572.04" y1="50.67" x2="572.04" y2="60.16"/>
+      <line class="cls-4" x1="576.78" y1="55.41" x2="567.3" y2="55.41"/>
+    </g>
+    <g>
+      <path class="cls-5" d="M572,96a8,8,0,1,0-8-8,8,8,0,0,0,8,8"/>
+      <g>
+        <line class="cls-4" x1="572.04" y1="83.27" x2="572.04" y2="92.76"/>
+        <line class="cls-4" x1="576.78" y1="88.01" x2="567.3" y2="88.01"/>
+      </g>
+    </g>
+    <g>
+      <path class="cls-5" d="M614,328a8,8,0,1,0-8-8,8,8,0,0,0,8,8"/>
+      <g>
+        <line class="cls-4" x1="614.04" y1="315.27" x2="614.04" y2="324.76"/>
+        <line class="cls-4" x1="618.78" y1="320.01" x2="609.3" y2="320.01"/>
+      </g>
+    </g>
+    <line class="cls-4" x1="578.81" y1="511.51" x2="782.59" y2="511.51"/>
+    <g>
+      <path class="cls-5" d="M575,519.51a8,8,0,1,0-8-8,8,8,0,0,0,8,8"/>
+      <g>
+        <line class="cls-4" x1="575.04" y1="506.77" x2="575.04" y2="516.26"/>
+        <line class="cls-4" x1="579.78" y1="511.51" x2="570.3" y2="511.51"/>
+      </g>
+    </g>
+  </g>
+  <g id="Text">
+    <text class="cls-6" transform="translate(140.19 61.56)">DER ZIERSTÖPSEL<tspan class="cls-7"><tspan x="-39.81" y="40">Jede unserer Sorten schmückt ein eigener Stöpsel, </tspan><tspan x="-39.73" y="59">zum Großteil entworfen von einem Meister seines </tspan><tspan x="-39.04" y="78">Faches, dem Karlsruher Goldschmied Otto Jakob. </tspan><tspan x="-26.08" y="97">Das spezielle Design lässt dem Schnaps auch </tspan><tspan x="-32.71" y="116">nach Öffnung der Flasche Raum, sich weiter zu </tspan><tspan x="-38.79" y="135">entwickeln, ohne dabei einen Verlust der Aromen </tspan><tspan x="68.85" y="154">zu erleiden. </tspan></tspan></text>
+    <text class="cls-6" transform="translate(146.94 365.56)">DER AUSGIESSER<tspan class="cls-7"><tspan x="-48.38" y="40">Jeder einzelne Tropfen unseres Schnapses ist kost</tspan><tspan x="234.02" y="40">-</tspan><tspan x="-50.3" y="59">bar und trägt die volle Essenz seiner Frucht in sich. </tspan><tspan x="-43.15" y="78">Der unter dem Zierstöpsel verborgene Ausgießer </tspan><tspan x="-33.43" y="97">ermöglicht nahezu tropfenweisen Ausschank.</tspan></tspan></text>
+    <text class="cls-6" transform="translate(825.5 516.56)">DER NABEL<tspan class="cls-7"><tspan x="-75.06" y="40">Vor über 200 Jahren bei Hall in Tirol entstanden </tspan><tspan x="-76.24" y="59">durch das Missgeschick eines jungen Glasbläser</tspan><tspan x="196.74" y="59">-</tspan><tspan x="-79.7" y="78">lehrlings, der die noch produktionsweiche Flasche </tspan><tspan x="-79.12" y="97">versehentlich mit einer Zange in der Mitte zusam</tspan><tspan x="199.63" y="97">-</tspan><tspan x="-85.07" y="116">mendrückte und ihr so einen „Nabel“ schenkte – die </tspan><tspan x="-82.44" y="135">Geburt einer regionalen Flaschenlegende. Heute ist </tspan><tspan x="-74.8" y="154" xml:space="preserve">dieser Nabel charakteristisch für unsere Flasche.  </tspan></tspan></text>
+    <text class="cls-6" transform="translate(751.92 162.56)">DIE FLASCHENGRÖSSEN</text>
+    <text class="cls-8" transform="translate(838.24 242.97)"><tspan class="cls-9">7</tspan><tspan class="cls-10" x="7.02" y="0">0</tspan><tspan class="cls-11" x="14.03" y="0">0 m</tspan><tspan x="35.46" y="0">l</tspan></text>
+    <text class="cls-12" transform="translate(838.24 323.47)"><tspan class="cls-9">3</tspan><tspan class="cls-10" x="7.02" y="0">5</tspan><tspan class="cls-11" x="14.03" y="0">0 m</tspan><tspan x="35.46" y="0">l</tspan></text>
+    <text class="cls-8" transform="translate(841.75 394.52)"><tspan class="cls-9">4</tspan><tspan class="cls-10" x="7.02" y="0">0</tspan><tspan class="cls-11" x="14.03" y="0" xml:space="preserve"> m</tspan><tspan x="28.44" y="0">l</tspan></text>
+    <text class="cls-8" transform="translate(985.74 303.69)"><tspan class="cls-10">Gr</tspan><tspan class="cls-11" x="14.76" y="0">ö</tspan><tspan class="cls-13" x="21.78" y="0">ß</tspan><tspan class="cls-9" x="28.78" y="0">en</tspan><tspan class="cls-10" x="42.07" y="0">v</tspan><tspan class="cls-9" x="49.07" y="0">e</tspan><tspan class="cls-14" x="55.33" y="0">r</tspan><tspan class="cls-9" x="59.86" y="0">gleic</tspan><tspan x="87.44" y="0">h</tspan></text>
+  </g>
+</svg>

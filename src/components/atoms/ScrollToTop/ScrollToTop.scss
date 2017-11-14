@@ -1,0 +1,17 @@
+@import '../../../css/vars';
+
+.scrollToTop {
+	position: fixed;
+	bottom: 20px;
+	right: 35px;
+	padding: 10px;
+	opacity: 0.2;
+	display: none;
+	transition: opacity .2s ease-out;
+	&:hover {
+		opacity: 1;
+	}
+	@include breakpoint($desktop) {
+		display: block;
+	}
+}

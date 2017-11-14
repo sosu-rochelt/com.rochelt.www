@@ -1,0 +1,317 @@
+@import '~susy/sass/susy';
+@import '~breakpoint-sass';
+
+$mobile: 320px;
+$tablet: 740px;
+$desktop: 980px;
+$wide: 1200px;
+
+$susy: (
+  columns: 10,
+  gutters: 0.33,
+  gutter-position: before,
+  container: 1140px,
+  debug:
+    (
+      toggle: bottom left,
+      output: image,
+      image: hide,
+      color: rgba(#336f5f, 0.5)
+    )
+);
+
+// colors:
+
+$primaryColor: #666;
+$secondaryColor: #336f5f;
+$primaryBackground: #f2f2f2;
+$secondaryBackground: #fff;
+
+$lightGray: #9c9d9d;
+
+// fonts:
+
+$fontVariant1: 'GillSans', 'GillSans Nova', 'Lato', sans-serif;
+$fontVariant2: 'Times', serif;
+// $fontVariant3: 'Bodoni 72', 'Crimson Text', serif;
+
+$fontScallingFactor: 0.8;
+$copy-fontSize: 1.6rem;
+$copy-lineHeight: 1.5;
+
+$headline1-fontSize: 4.8rem * $fontScallingFactor; // 48px
+$headline1-lineHeight: 1.4791666667; // 71px
+
+$headline2-fontSize: 2.9rem * $fontScallingFactor; // 29px
+$headline2-lineHeight: 1.5;
+
+$subHeadline1-fontSize: 2.2rem * $fontScallingFactor; // 22px
+$subHeadline1-lineHeight: 1.75;
+
+$subHeadline2-fontSize: 1.9rem * $fontScallingFactor; // 19px
+$subHeadline2-lineHeight: 1.5263157895; // 29px
+
+$footer-fontSize: 1.28rem; // 16px
+$footer-lineHeight: 1.8; // 29px
+
+$caption-fontSize: 9.5rem;
+$caption-lineHeight: 1.2;
+
+$headerSubhead-fontSize: 2.1rem * $fontScallingFactor; // 21px
+$headerSubhead-lineHeight: 2.9rem * $fontScallingFactor; // 29px
+
+$underline-fontSize: $headerSubhead-fontSize;
+$underline-lineHeight: $headerSubhead-lineHeight;
+$imprint-fontSize: 1.3rem * $fontScallingFactor; // 13px
+$imprint-lineHeight: 2.9rem * $fontScallingFactor; // 29px
+
+$navigation-fontSize: 1.4rem * $fontScallingFactor; // 14px
+$navigation-lineHeight: 2.64; // 37px
+
+%copy {
+  font-family: $fontVariant2;
+  line-height: $copy-lineHeight;
+  letter-spacing: 0.6px;
+  color: $primaryColor;
+  font-size: $copy-fontSize * 0.8;
+
+  @include breakpoint($desktop) {
+    font-size: $copy-fontSize;
+  }
+}
+.subtitle,
+%subtitle {
+  font-family: $fontVariant1;
+  color: $secondaryBackground;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+  font-size: 1.2rem;
+  line-height: 2.7;
+}
+
+%headline1 {
+  font-family: $fontVariant1;
+  letter-spacing: 10px;
+  color: $primaryColor;
+  font-size: $headline1-fontSize * 0.4;
+  line-height: $headline1-lineHeight;
+
+  @include breakpoint($desktop) {
+    font-size: $headline1-fontSize;
+  }
+}
+
+%headline2 {
+  font-family: $fontVariant1;
+  font-size: $headline2-fontSize * 0.6;
+  line-height: $headline2-lineHeight;
+
+  text-transform: uppercase;
+  color: $primaryColor;
+  letter-spacing: 7px;
+
+  @include breakpoint($desktop) {
+    font-size: $headline2-fontSize;
+  }
+}
+
+%subHeadline1 {
+  font-family: $fontVariant1;
+  font-size: $subHeadline1-fontSize * 0.6;
+  line-height: $subHeadline1-lineHeight;
+
+  letter-spacing: 7px;
+
+  @include breakpoint($desktop) {
+    font-size: $subHeadline1-fontSize;
+  }
+}
+
+%subHeadline2 {
+  font-family: $fontVariant1;
+  font-size: $subHeadline2-fontSize * 0.7;
+  line-height: $subHeadline2-lineHeight;
+  letter-spacing: 5px;
+  color: $secondaryColor;
+
+  @include breakpoint($desktop) {
+    font-size: $subHeadline2-fontSize;
+  }
+}
+
+%footer {
+  font-family: $fontVariant1;
+  line-height: $footer-lineHeight;
+  letter-spacing: 0.25rem;
+  font-size: $footer-fontSize;
+  @include breakpoint($desktop) {
+    font-size: $footer-fontSize;
+  }
+}
+
+%caption {
+  font-family: $fontVariant2;
+  font-size: $caption-fontSize * 0.5;
+  @include breakpoint($desktop) {
+    font-size: $caption-fontSize;
+    line-height: $caption-lineHeight;
+  }
+}
+
+%underline {
+  font-family: $fontVariant1;
+  font-size: $underline-fontSize;
+  line-height: $underline-lineHeight;
+  letter-spacing: 9px;
+}
+
+%headerSubhead {
+  font-family: $fontVariant2;
+  line-height: $headerSubhead-lineHeight;
+  font-size: $headerSubhead-fontSize * 0.5;
+}
+
+%quote {
+  font-family: $fontVariant2;
+  letter-spacing: 8px;
+  line-height: 1.7;
+  font-size: 27px;
+}
+
+%imprint {
+  font-family: $fontVariant1;
+  font-size: $imprint-fontSize;
+  line-height: $imprint-lineHeight;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+}
+
+%navigation {
+  font-family: $fontVariant1;
+  font-size: $navigation-fontSize;
+  line-height: $navigation-lineHeight;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4.5px;
+}
+
+%link {
+  & {
+    text-decoration: none;
+    color: $secondaryColor;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+%subnav {
+  letter-spacing: 4.5px;
+  text-transform: uppercase;
+
+  color: $lightGray;
+
+  font-family: $fontVariant1;
+  font-size: 1.12rem;
+  line-height: 2;
+}
+
+%visually-hidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+
+// mixins
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin animation($value) {
+  -webkit-animation: unquote($value);
+  -moz-animation: unquote($value);
+  -o-animation: unquote($value);
+  animation: unquote($value);
+}
+
+@mixin animation-property($property, $value) {
+  -webkit-animation-#{$property}: unquote($value);
+  -moz-animation-#{$property}: unquote($value);
+  -o-animation-#{$property}: unquote($value);
+  animation-#{$property}: unquote($value);
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// transitions
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: opacity 500ms ease-out;
+}
+
+.appear-enter {
+  opacity: 0;
+  // transform: translateY(-55%) translateX(-50%);
+}
+
+.appear-enter-active {
+  opacity: 1;
+  // transform: translateY(-50%) translateX(-50%);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.appear-leave {
+  opacity: 1;
+  // transform: translateY(-50%) translateX(-50%);
+}
+
+.appear-leave-active {
+  opacity: 0;
+  // transform: translateY(-55%) translateX(-50%);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}

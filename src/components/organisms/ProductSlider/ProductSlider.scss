@@ -1,0 +1,73 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import '../../../css/vars';
+.productSlider {
+  // width: span(10 of 10);
+  margin-top: 60px;
+  position: relative;
+  &-right,
+  &-left {
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  &-left {
+    left: 0;
+  }
+  &-right {
+    right: 0;
+  }
+}
+
+.slick-initialized .slick-slide.productSlide {
+  display: flex;
+  align-items: flex-start;
+}
+.productSlide {
+  position: absolute;
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  flex-wrap: wrap;
+  pointer-events: none;
+  @include breakpoint($desktop) {
+    flex-wrap: nowrap;
+  }
+  &--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .productImage {
+    width: span(4 of 10);
+    padding: 0 span(3) + gutter();
+    @include breakpoint($desktop) {
+      padding-left: span(1 of 10) + gutter();
+      padding-right: 0;
+      width: span(5 of 10);
+      margin-right: gutter();
+    }
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .productInfo {
+    width: span(8 of 10);
+    padding: 0 span(1) + gutter();
+    @include breakpoint($desktop) {
+      width: span(5 of 10);
+      padding: 0;
+      margin-right: span(1 of 10) + gutter();
+      text-align: center;
+    }
+  }
+  .productInfo-tasting {
+    width: span(8 of 10);
+    padding: 0 span(1) + gutter();
+  }
+}

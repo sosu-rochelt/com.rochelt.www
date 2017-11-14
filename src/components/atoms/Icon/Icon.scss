@@ -1,0 +1,36 @@
+.icon {
+	svg {
+		width: 100%;
+	}
+	display: inline-block;
+	&--white svg path,
+	&--white svg polygon {
+		fill: white;
+	}
+	&--red svg path,
+	&--red svg polygon {
+		fill: red;
+	}
+	&--black svg path,
+	&--black svg polygon {
+		fill: black;
+	}
+	&--teal svg path,
+	&--teal svg polygon {
+		fill: teal;
+	}
+	&--salmon svg path,
+	&--salmon svg polygon {
+		fill: salmon;
+	}
+	&--grey svg path,
+	&--grey svg polygon {
+		fill: #666666;
+	}
+	&--arrowLeft,
+	&--arrowRight {
+		svg path {
+			fill: rgba(255, 255, 255, 0.2);
+		}
+	}
+}

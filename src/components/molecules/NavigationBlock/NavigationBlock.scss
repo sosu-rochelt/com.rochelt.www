@@ -1,0 +1,150 @@
+@import '../../../css/vars';
+
+.navigationBlock {
+  // background: salmon;
+  top: -100%;
+  opacity: 0.2;
+  bottom: 100%;
+  right: 0;
+  left: 0;
+  position: fixed;
+  transition: opacity 0.2s ease-in-out, top 0.2s ease-in-out,
+    bottom 0.2s ease-in-out;
+  z-index: 4;
+
+  @include breakpoint($desktop) {
+    opacity: 1;
+    top: 30px;
+    right: auto;
+    bottom: auto;
+    padding: 0 30px 0 0;
+  }
+
+  // .header & {
+  //   top: 30px;
+  // }
+  &--active {
+    top: 0;
+    bottom: 0;
+    opacity: 1;
+    @include breakpoint($desktop) {
+      top: 30px;
+    }
+  }
+  &__home {
+    margin-top: 5vw;
+
+    .icon {
+      width: 50px !important;
+      @include breakpoint($desktop) {
+        width: 30px !important;
+        height: auto;
+      }
+    }
+  }
+  &__home,
+  &__list {
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    @include breakpoint($desktop) {
+      margin: 12px 20px 12px 10px;
+      text-align: left;
+    }
+  }
+  &__list {
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    transition: opacity 0.4s ease-out;
+    @include breakpoint($desktop) {
+    }
+    &--hidden {
+      opacity: 0;
+    }
+  }
+  &__link {
+    font-size: 5vh;
+    display: block;
+    margin-bottom: -4px;
+    @extend %navigation;
+    @include breakpoint($desktop) {
+      font-size: $navigation-fontSize;
+    }
+  }
+  &__bookmark {
+    display: none;
+    @include breakpoint($desktop) {
+      display: block;
+    }
+    @extend %subnav;
+    color: $primaryBackground;
+    white-space: nowrap;
+    padding-left: 2.5rem;
+    cursor: pointer;
+    &--active,
+    &--hover,
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+
+  .navigationBlock {
+    &__link {
+      color: $primaryBackground;
+      &:hover,
+      &--active {
+        color: $primaryColor;
+      }
+    }
+    &__bookmark {
+      color: $lightGray;
+      &--active,
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
+  }
+  &--dark {
+    .navigationBlock {
+      &__link {
+        color: $lightGray;
+        &:hover,
+        &--active {
+          color: $primaryColor;
+        }
+      }
+      &__bookmark {
+        &:hover {
+          color: $secondaryColor;
+        }
+      }
+    }
+  }
+  &--dark &__wrapper {
+    background-color: $primaryBackground;
+    @include breakpoint($desktop) {
+      background-color: rgba($primaryBackground, 0.9);
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    transition: background-color 0.2s ease-in-out;
+    @include breakpoint($desktop) {
+      display: inline-block;
+      margin-left: 30px;
+      max-width: 280px;
+      width: auto;
+      height: auto;
+    }
+  }
+}

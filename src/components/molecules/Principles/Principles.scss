@@ -1,0 +1,60 @@
+@import '../../../css/vars';
+
+.principles {
+    display: flex;
+    flex-direction: row;
+    padding: 0 span(1) + gutter();
+    // width: span(10 of 10);
+    list-style-type: none;
+    // margin: auto;
+    // padding-left: span(1);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .principle {
+        display: inline-block;
+
+        width: span(8 of 10);
+        margin: 0 span(2 of 12);
+        text-align: center;
+
+        color: $primaryColor;
+
+        @include breakpoint($desktop) {
+            width: span(3 of 8);
+            // margin-right: span(1);
+            margin: 0;
+            margin-bottom: 75px;
+
+        }
+        flex-shrink: 1;
+        flex-grow: 0;
+        @extend %subHeadline1;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    .principle__order {
+        position: relative;
+
+        display: block;
+
+        margin-bottom: 40px;
+
+        color: $secondaryColor;
+
+        @extend %caption;
+        &:after {
+            position: absolute;
+            left: 50%;
+
+            display: block;
+
+            width: 30px;
+            bottom: 3px;
+
+            content: '';
+            transform: translateX(-50%);
+
+            border-bottom: 2px solid $primaryColor;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+@import '../../../css/vars';
+
+.productsTOC {
+  z-index: 100;
+  // width: 100vw;
+  text-align: center;
+
+  @include breakpoint($desktop) {
+    &:after {
+      position: absolute;
+      z-index: -1;
+      top: 15px;
+      right: 0;
+
+      display: block;
+
+      width: 20px;
+      height: 20px;
+      // margin-right: calc((1.5rem + 30px) * -1);
+      margin-top: -4px;
+      content: '';
+      transform: rotate(45deg);
+
+      background: $primaryBackground;
+      // background: salmon;
+    }
+  }
+
+  @include breakpoint($desktop) {
+    right: 30px;
+    position: absolute;
+    text-align: right;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    // padding: 0 30px;
+  }
+
+  &-toggle {
+    position: absolute;
+
+    opacity: 0;
+  }
+  &-label {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    left: 0;
+    @include breakpoint($desktop) {
+      left: auto;
+      // margin-right: calc(1.5rem + 30px + 20px);
+      right: 33px;
+      // padding-right: 30px;
+    }
+    cursor: pointer;
+  }
+  &-container {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    width: 100%;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+    background: white;
+    @include breakpoint($desktop) {
+      width: auto;
+      margin-right: 1.5rem;
+      padding: 4rem - 1.2rem 2rem 1.7rem 6.5rem;
+    }
+  }
+  &-toggle:checked ~ &-container {
+    z-index: 1;
+
+    opacity: 1;
+  }
+  &-toggle:checked + &-label {
+  }
+  &-toggle + &-label .heading {
+    margin-top: 1rem;
+    white-space: nowrap;
+  }
+  & .heading {
+    margin-top: 5.2rem;
+
+    text-align: center;
+    letter-spacing: 5px;
+
+    color: $primaryColor;
+
+    font-size: 1.52rem;
+
+    @include breakpoint($desktop) {
+      .icon {
+        display: none;
+      }
+      margin-top: 2.2rem;
+      text-align: right;
+    }
+  }
+  &-product {
+    cursor: pointer;
+    @extend %subnav;
+    &:hover,
+    &--active {
+      color: $secondaryColor;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+backend:
+  name: github
+  repo: kevinfoerster/com.rochelt.www # Path to your Github repository
+  branch: gatsby-update # Branch to update
+  # base_url: http://rochelt.kevinfoerster.com # Path to ext auth provider
+
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+
+collections:
+  - name: "products"
+    label: "Products" # Used in the UI, ie.: "New Post"
+    folder: "src/pages/products" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # T he fields each document in this collection have
+      - {label: "Produktname", name: "title", widget: "string"}
+      - {label: "Produktkategorie", name: "category", widget: "string"}      
+      - {label: "Abbildung Flasche", name: "bottle", widget: "image", required: false}
+      - {label: "Abbildung Frucht", name: "ingredients", widget: "image", required: false}
+      - {label: "Fakten", name: "facts", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+ 
+      - {label: Structure, name: structure, widget: list, fields: [{label: image, name: image, widget: image, default: "/img/blog/bottle.png"}, {label: Titel (optional), name: title, widget: string}, {label: Beschreibung (optional), name: description, widget: text}]}
+  - name: "was"
+    preview: false
+    label: "was" # Used in the UI, ie.: "New Post"
+    folder: "src/pages/was" # The path to the folder where the documents are stored
+    create: false # Allow users to create new documents in this collection
+    slug: index
+    fields:
+      - {label: 'Title', name: "title", widget: "string"}
+      - {label: 'Path', name: "path", widget: "string"}
+      - {label: 'Name', name: "name", widget: "string"}
+      - {label: 'Subline', name: "subline", widget: "string"}
+      - {label: 'Layout', name: "layout", widget: "hidden", default: "post"}
+      - {label: 'Header Image', name: 'headerImg', widget: 'image'}
+      - label: 'intro'
+        name: intro
+        widget: 'object'
+        fields: 
+          - {label: 'title', name: 'title', widget: 'string'}
+          - {label: 'text', name: 'text', widget: 'markdown'}
+
+      - label: 'structure'
+        name: structure
+        widget: 'list'
+        fields: 
+          - {label: "type", name: "type", widget: "select", options: ["copy", "divider", "image", "infographic", "productCircle", "quote"]}
+          - {label: 'variant', name: 'variant', widget: 'variants'}
+          - label: content
+            name: content
+            widget: object
+            fields:
+              - {label: 'text', name: 'text', widget: 'markdown'}
+              - {label: 'src', name: 'src', widget: 'image'}
+              - {label: 'overlay', name: 'overlay', widget: 'image'}

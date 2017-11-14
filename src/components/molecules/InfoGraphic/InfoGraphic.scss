@@ -1,0 +1,72 @@
+@import '../../../css/vars';
+
+.infoGraphic {
+  display: none;
+  @include breakpoint($desktop) {
+    display: block;
+  }
+
+  width: span(10 of 10);
+  position: relative;
+
+  .image + .image,
+  &-overlay + &-infoWrapper,
+  .image + &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  svg {
+    title {
+      pointer-events: none;
+    }
+    [id^='toggle_'] {
+      cursor: pointer;
+      & > * {
+        pointer-events: none;
+      }
+      & > path {
+        pointer-events: initial;
+      }
+    }
+  }
+  &-infoWrapper {
+    pointer-events: none;
+    // background: rgba(salmon, 0.2);
+    // @include aspect-ratio(1140, 720);
+  }
+  &-info {
+    position: absolute;
+    width: span(2) + gutter() * 2;
+    margin-left: span(1);
+    margin-right: span(1);
+    text-align: center;
+    transition: opacity 0.2s ease-in;
+    img {
+      width: 100%;
+    }
+    &--hidden {
+      opacity: 0;
+    }
+    &--middle {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &--top {
+      top: 0;
+    }
+    &--left {
+      left: 0;
+    }
+    &--bottom {
+      bottom: 0;
+      transform: translateY(-100%);
+    }
+    &--right {
+      right: 0;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import '../../../css/vars';
+
+@include keyframes('burger-move-right') {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(60px) translateY(0);
+    // top: 20px + 3px;
+  }
+  51% {
+    transform: translateX(60px) translateY(84px) rotate(45deg);
+    // top: 20px;
+  }
+  100% {
+    transform: translateX(0) translateY(6px) rotate(45deg);
+    // top: 20px;
+  }
+}
+
+@include keyframes('burger-move-left') {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-60px) translateY(0);
+    // top: 20px + 3px;
+  }
+  51% {
+    transform: translateX(-60px) translateY(84px) rotate(-45deg);
+    // top: 20px;
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(-45deg);
+    // top: 20px;
+  }
+}
+
+.hamburger {
+  height: 20px;
+  width: 40px;
+  padding: 10px;
+  display: block;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  // overflow: hidden;
+  background-color: rgba($primaryBackground, 0.9);
+  @include breakpoint($desktop) {
+    display: none;
+  }
+  span {
+    position: absolute;
+    z-index: 5;
+    width: 20px;
+    height: 2px;
+    display: block;
+    transform-origin: 50% 50%;
+
+    transform: translateX(-50%) translateY(50%);
+    left: 50%;
+    background-color: $primaryColor;
+    transition: transform 0.2s ease-in-out, top 0.2s ease-in-out;
+    &:first-child {
+      top: 20px - 3px;
+    }
+    &:last-child {
+      top: 20px + 3px;
+    }
+  }
+
+  &--active {
+    span:first-child {
+      transform: translateX(-50%) translateY(50%) rotate(-45deg);
+      top: 20px;
+    }
+    span:last-child {
+      top: 20px;
+      transform: translateX(-50%) translateY(50%) rotate(45deg);
+    }
+  }
+}

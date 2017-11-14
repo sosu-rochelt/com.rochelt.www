@@ -1,0 +1,9 @@
+@import '../../../css/vars';
+
+.productOverview {
+    width: span(10 of 10);
+    margin-bottom: 7.6rem;
+    & > div {
+        position: relative;
+    }
+}

@@ -1,0 +1,26 @@
+@import '../../../css/vars';
+
+.copy {
+  margin-bottom: 4rem;
+  a,
+  a:link,
+  a:visited {
+    @extend %link;
+  }
+}
+
+.content .copy:last-child {
+  margin-bottom: 7.6rem;
+}
+
+.divider + .bookmark + .content .copy,
+.divider + .bookmark + .slider,
+.divider + .content .copy {
+  margin-top: 7.5rem;
+}
+
+.content .copy {
+  h1:last-child {
+    margin-bottom: calc(-7.6rem + 3.5rem);
+  }
+}

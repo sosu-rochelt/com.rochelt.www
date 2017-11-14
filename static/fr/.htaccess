@@ -1,0 +1,1 @@
+RewriteRule ^$ http://http://%{HTTP_HOST}/de/ [L,R=302]

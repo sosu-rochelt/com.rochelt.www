@@ -1,0 +1,41 @@
+@import '../../../css/vars';
+
+.timeline {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: span(8);
+  padding-top: 50px;
+  align-items: flex-end;
+  @include breakpoint($wide) {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+  }
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+
+    width: 2px;
+    height: calc(100% - 60px);
+
+    content: '';
+    transform: translateX(-50%);
+
+    background: $primaryColor;
+    @include breakpoint($wide) {
+      left: calc(50% - 2px/2);
+    }
+  }
+  &-wrapper {
+    margin-bottom: 9.5rem;
+    .icon {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

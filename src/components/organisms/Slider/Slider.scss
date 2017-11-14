@@ -1,0 +1,84 @@
+@import '~slick-carousel/slick/slick.css';
+@import '~slick-carousel/slick/slick-theme.css';
+@import '../../../css/vars';
+
+.slider {
+  width: 100%;
+
+  .slick-list {
+    transition: height 0.2s;
+  }
+  .slick-slide,
+  .slick-slide * {
+    user-select: none;
+  }
+  .slick-next,
+  .slick-prev {
+    height: 100%;
+    padding: 0 20px;
+
+    top: 0;
+
+    &:before {
+      content: '';
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    transform: translateY(0%);
+    z-index: 1;
+  }
+  .slick-next {
+    right: 0;
+  }
+  .slick-prev {
+    left: 0;
+  }
+
+  &-text-below {
+    .slick-prev,
+    .slick-next {
+      height: calc(100% - 86px);
+    }
+    .slide-text {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.slick-initialized .slider-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide {
+  &-text {
+    flex-grow: 0;
+    width: span(8);
+    margin: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+    @include susy-media(48rem) {
+    }
+  }
+}
+.slide-image {
+  .image {
+    padding-top: 0;
+  }
+}
+
+.slide-image + .slide-text {
+  margin-top: 32px;
+  h3,
+  p {
+    margin: 0;
+  }
+}
+
+.slider + .divider {
+  margin-top: 60px;
+}

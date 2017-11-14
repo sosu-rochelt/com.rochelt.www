@@ -1,0 +1,185 @@
+@import '../../../css/vars';
+
+.quote {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 30rem;
+  @include breakpoint($desktop) {
+    height: 45em;
+  }
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  justify-content: center;
+  align-items: center;
+  &-textwrapper {
+    // background-color: salmon;
+    position: relative;
+
+    width: span(8 of 10);
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: center;
+  }
+  &--light {
+    .quote-text p > span,
+    .quote-author {
+      color: $secondaryBackground;
+      text-shadow: 0 0 20px black;
+    }
+    .quote-line {
+      border-color: $secondaryBackground;
+    }
+  }
+  &--dark {
+    .quote-text p > span,
+    .quote-author {
+      color: $primaryColor;
+      text-shadow: 0 0 20px white;
+    }
+    .quote-line {
+      border-color: $primaryColor;
+    }
+  }
+
+  &-text {
+    font-size: 24px;
+    line-height: 1.2;
+
+    overflow: hidden;
+
+    font-style: italic;
+    text-align: center;
+
+    p {
+      margin: 0;
+      & > span {
+        font-size: 24px;
+        line-height: 1.2;
+
+        vertical-align: bottom;
+        font-family: $fontVariant2;
+        line-height: 1.7;
+        font-size: 2.7rem * 0.7;
+        @include breakpoint($desktop) {
+          letter-spacing: 0.8rem;
+          font-size: 2.7rem;
+        }
+        text-transform: uppercase;
+      }
+    }
+    span.shape {
+      display: none;
+    }
+
+    .align {
+      display: inline-block;
+
+      width: 0;
+      height: 100%;
+
+      vertical-align: middle;
+    }
+  }
+
+  &--advanced {
+    span.shape {
+      display: none;
+      float: right;
+
+      width: 10em;
+      height: 10em;
+
+      shape-margin: 1px;
+      shape-outside: polygon(240px 0px, 240px 240px, 0px 240px);
+
+      @include breakpoint($desktop) {
+        display: block;
+      }
+    }
+  }
+  &-line {
+    display: none;
+  }
+
+  &-author {
+    margin: 0 gutter();
+    padding-left: 2em;
+    text-align: center;
+    white-space: nowrap;
+
+    @extend %imprint;
+  }
+
+  &--advanced {
+    .quote-text {
+      @include breakpoint($desktop) {
+        width: span(6 of 8);
+        text-align: right;
+      }
+    }
+    .quote-author {
+      @include breakpoint($desktop) {
+        width: span(2 of 8);
+        text-align: left;
+        position: absolute;
+        right: 0;
+        bottom: 0.5rem;
+      }
+    }
+
+    .quote-line {
+      position: absolute;
+      // top: 2.32rem;
+      // left: -.5em;
+      bottom: 0;
+
+      display: none;
+
+      width: 80px;
+      height: 80px;
+
+      content: '';
+      transform: translateX(-46px) rotate(45deg);
+      transform-origin: 0 100%;
+
+      border-left: 1px solid;
+      @include breakpoint($desktop) {
+        display: block;
+      }
+    }
+  }
+  .divider.divider--no-bottom-margin,
+  .divider.divider--no-top-margin {
+    position: absolute;
+    right: 0;
+    left: 0;
+  }
+  .divider.divider--no-bottom-margin {
+    bottom: 0;
+  }
+  .divider.divider--no-top-margin {
+    top: 0;
+  }
+}
+
+.divider + .quote {
+  margin-top: 7.6rem;
+}
+.divider.divider--small + .quote {
+  margin-top: 0;
+}
+
+.quote + .divider {
+  margin-top: 6rem;
+}
+
+.quote + .divider.divider--no-top-margin {
+  margin-top: 0;
+}

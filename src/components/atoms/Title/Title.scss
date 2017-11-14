@@ -1,0 +1,62 @@
+@import '../../../css/vars';
+
+.title {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  width: span(8 of 10);
+  transform: translateY(-50%) translateX(-50%);
+  text-align: center;
+  @include breakpoint($desktop) {
+    width: span(6 of 10);
+  }
+  &-main,
+  &-subline {
+    display: block;
+
+    text-transform: uppercase;
+
+    color: $secondaryBackground;
+  }
+  &-main {
+    @extend %caption;
+    &-text {
+      position: relative;
+
+      display: inline-block;
+    }
+    &-text:empty:after,
+    &-text:empty:before {
+      display: none;
+    }
+    &-text:after,
+    &-text:before {
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+
+      width: 19px;
+      height: 1px;
+
+      content: '';
+
+      border-top: 3px solid $secondaryBackground;
+    }
+    &-text:before {
+      right: 100%;
+
+      margin-right: 30px;
+    }
+    &-text:after {
+      left: 100%;
+
+      margin-left: 30px;
+    }
+  }
+  &-subline {
+    margin-top: -3px;
+
+    @extend %underline;
+  }
+}

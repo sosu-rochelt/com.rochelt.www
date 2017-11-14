@@ -1,0 +1,42 @@
+@import '../../../css/vars';
+
+.introBlock {
+  position: relative;
+
+  display: flex;
+
+  margin: 0 30px;
+  padding-bottom: 70px;
+
+  text-align: center;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  // @include show-grid();
+  .introBlock-wrapper {
+    @include container(1140px);
+    width: 100%;
+  }
+  .content {
+    a,
+    a:link,
+    a:visited {
+      @extend %link;
+    }
+    .divider {
+      margin-bottom: 6.2rem;
+    }
+    width: span(10);
+
+    @include breakpoint($tablet) {
+      width: span(6);
+    }
+    @include breakpoint($desktop) {
+      width: span(6);
+    }
+    margin: auto;
+  }
+  .image {
+    flex-basis: 100%;
+  }
+}

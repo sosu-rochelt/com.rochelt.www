@@ -1,0 +1,26 @@
+@import '../../../css/vars';
+
+.infoGraphicStatic {
+  display: none;
+  @include breakpoint($desktop) {
+    display: block;
+  }
+
+  width: span(10 of 10);
+  position: relative;
+
+  .image + .image,
+  .image + &-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  svg {
+    title {
+      pointer-events: none;
+    }
+  }
+}

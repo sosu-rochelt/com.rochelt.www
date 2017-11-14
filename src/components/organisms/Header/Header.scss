@@ -1,0 +1,41 @@
+@import '../../../css/vars';
+
+.header {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+
+  overflow: hidden;
+  clip: rect(0, auto, auto, 0);
+  max-width: 100%;
+  width: 100vw;
+  height: 50vh;
+
+  @include breakpoint($desktop) {
+    height: 296px;
+  }
+
+  .languageSelection {
+    display: none;
+    @include breakpoint($desktop) {
+      display: flex;
+    }
+  }
+  // .navigationBlock {
+  //   display: none;
+  //   @include susy-media(48rem) {
+  //     &__wrapper {
+  //       // min-height: 296px - 30px;
+  //     }
+  //     display: block;
+  //   }
+  // }
+}
+
+.header + div {
+  padding-top: 50vh;
+  @include breakpoint($desktop) {
+    padding-top: 296px;
+  }
+}

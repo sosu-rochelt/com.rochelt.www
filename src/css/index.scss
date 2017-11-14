@@ -1,0 +1,77 @@
+@import '~susy/sass/susy';
+@import '_vars';
+// $susy: (
+//   columns: 12,
+//   gutters: 0.25,
+//   gutter-position: both,
+//   debug: (image: show)
+// );
+
+html,
+body {
+  font-size: 13px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  -webkit-overflow-scrolling: touch;
+  @include breakpoint($desktop) {
+    font-size: 10px;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.fullPage {
+  position: relative;
+
+  width: 100vw;
+  height: 100vh;
+
+  .icon--name {
+    max-width: 430px;
+  }
+
+  .name-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 80vw !important;
+
+    transform: translateY(-50%) translateX(-50%);
+    text-align: center;
+    .heading {
+      margin-top: 20px;
+
+      color: $secondaryBackground;
+    }
+  }
+  .footer {
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    width: 80vw !important;
+    transform: translateY(0%) translateX(-50%);
+    @include breakpoint($desktop) {
+      transform: translateY(-50%) translateX(-50%);
+      bottom: 2.9rem;
+    }
+
+    a,
+    a:link,
+    a:visited {
+      color: $secondaryBackground;
+    }
+  }
+  & > div {
+    margin: 0 auto;
+  }
+}
+
+.is-hidden {
+  display: none;
+}

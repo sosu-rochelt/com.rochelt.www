@@ -1,0 +1,86 @@
+@import '../../../css/vars';
+
+.languageSelection {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+
+    display: flex;
+
+    width: span(10);
+    margin: 0;
+    padding: 0;
+    padding-right: 30px + 15px;
+
+    list-style: none;
+
+    transform: translateX(-50%);
+
+    justify-content: flex-end;
+    &__item {
+        position: relative;
+
+        display: inline-block;
+
+        margin: 0 2px;
+        &:after {
+            $height: 10px;
+            position: absolute;
+            top: calc(50% - 5px); // $height/2
+            right: -2px;
+
+            display: block;
+
+            width: 1px;
+            height: $height;
+
+            content: '';
+
+            background-color: $secondaryBackground;
+
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+    }
+    &__link {
+        // todo: navgagiotn styling
+        @extend %navigation;
+        display: block;
+
+        padding: 5px;
+
+        transition: color linear .3s;
+        text-decoration: none;
+        letter-spacing: .45px;
+        text-transform: uppercase;
+
+        color: $secondaryBackground;
+    }
+    &:hover {
+        .languageSelection__link {
+            color: darken($secondaryBackground, 25%);
+            &:hover {
+                color: $secondaryBackground;
+            }
+        }
+    }
+    &--dark {
+        .languageSelection__item:after {
+            background-color: black;
+        }
+        .languageSelection__link {
+            color: black;
+        }
+        &:hover {
+            .languageSelection__link {
+                color: lighten(black, 25%);
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}

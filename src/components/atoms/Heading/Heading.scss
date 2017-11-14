@@ -1,0 +1,79 @@
+@import '../../../css/vars';
+
+p {
+  color: $primaryColor;
+
+  @extend %copy;
+  strong {
+    @extend %imprint;
+    font-weight: normal;
+  }
+}
+
+.heading {
+  font-weight: normal;
+
+  text-align: center;
+  text-transform: uppercase;
+  hyphens: auto;
+  &--h1 {
+    @extend %headline1;
+    margin-bottom: 35px;
+    + .heading--h3 {
+      // margin-bottom: 6rem;
+    }
+  }
+  &--h2 {
+    @extend %headline2;
+    margin-bottom: 4rem;
+  }
+  &--h3 {
+    color: $primaryColor;
+    margin-top: 4.5rem;
+    @extend %subHeadline1;
+  }
+  &--h4 {
+    @extend %subHeadline2;
+  }
+  &--h5 {
+    color: $primaryColor;
+
+    @extend %headerSubhead;
+  }
+  &--h6 {
+    color: $primaryColor;
+
+    margin-bottom: -1rem;
+    @extend %subHeadline2;
+  }
+}
+
+h1 {
+  @extend .heading;
+  @extend .heading--h1;
+}
+h2 {
+  @extend .heading;
+  @extend .heading--h2;
+}
+h3 {
+  @extend .heading;
+  @extend .heading--h3;
+}
+h4 {
+  @extend .heading;
+  @extend .heading--h4;
+}
+h5 {
+  @extend .heading;
+  @extend .heading--h5;
+}
+
+h6 {
+  @extend .heading;
+  @extend .heading--h6;
+}
+
+p + h2 {
+  margin-top: 5rem;
+}
